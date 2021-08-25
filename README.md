@@ -85,6 +85,9 @@
 1. Для организации конфигурации использовать [qbec](https://qbec.io/) основанный на [jsonnet](https://jsonnet.org/). Обратите внимание на имеющиеся функции для интеграции helm конфигов и [helm charts](https://helm.sh/)
 1. Если на первом этапе вы не воспользовались [Terraform Cloud](https://app.terraform.io/), то задеплойте в кластер [atlantis](https://www.runatlantis.io/) для отслеживания изменений инфраструктуры.
 
+Альтернативный вариант:
+1. Для организации конфигурации можно использовать [helm charts](https://helm.sh/)
+
 Ожидаемый результат:
 1. Git репозиторий с конфигурационными файлами для настройки кубернетес.
 2. Http доступ к web интерфейсу grafana.
@@ -99,10 +102,10 @@
 1. Автоматическая сборка docker образа при коммите в репозиторий с тестовым приложением.
 2. Автоматический деплой нового docker образа.
 
-Можно использовать [teamcity](https://www.jetbrains.com/ru-ru/teamcity/) или [jenkins](https://www.jenkins.io/)
+Можно использовать [teamcity](https://www.jetbrains.com/ru-ru/teamcity/), [jenkins](https://www.jenkins.io/) либо [gitlab ci](https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/)
 
 Ожидаемый результат:
-1. Teamcity или jenkins доступны по http.
+1. Интерфейс ci/cd сервиса доступен по http.
 2. При любом коммите в репозиторий с тестовым приложением происходит сборка и отправка в регистр докер образа.
 3. При создании тега в репозитории происходит деплой соответсвующего докер образа.
 
